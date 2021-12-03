@@ -1,0 +1,146 @@
+@import "index";
+@import "actividades";
+@import "sucursales";
+@import "planes";
+@import "contacto";
+@import "error";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+/* CSS RESET */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(48, 42, 42);
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*BARRA DE NAVEGACION HEADER*/
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav__logo {
+    width: 140px;
+    margin-left: 20px;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header__nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s;
+    z-index: 1;
+}
+
+.header__nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.header__nav-menu li a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header__nav-menu li a.active, .header__nav-menu li a:hover{
+    color: yellowgreen;
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .header__nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .header__nav-menu li {
+    display: block;
+}
+
+/*RESPONSIVE MENU*/ 
+
+@media screen and (min-width: 768px) {
+    .header__nav__logo {
+        margin-top: 50px;
+    }
+
+    nav{
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .header__nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .header__nav-menu li {
+        display:  inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition:  none;
+    }
+
+    .header__nav-menu li a {
+        font-size:  12px;
+    }
+    
+}
+
+/*FOOTER*/
+.footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 4px;
+    display: grid;
+    grid-gap: 20px;
+    background: white;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

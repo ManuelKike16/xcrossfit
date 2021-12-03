@@ -1,0 +1,38 @@
+/*acordeones*/
+.card {
+    background-color: rgba(0, 0, 0, 0.575);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+ .card a{
+     color: yellowgreen;
+     font-size: 20px;
+ }
+
+ .act__h1 {
+     color: #fff;
+     text-align: center;
+     font-size: 50px;
+ }
+
+ @media screen and (max-width: 850px){
+
+    body {
+        font-size:  14px;
+     }
+
+     .act__h1 {
+         font-size: 35px;
+     }
+}
+
+@media screen and (max-width: 600px){
+
+     body {
+        font-size:  12px;
+     }
+
+    .act__h1 {
+         font-size: 25px;
+     }
+}

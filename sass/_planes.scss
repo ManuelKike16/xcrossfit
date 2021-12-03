@@ -1,0 +1,143 @@
+/*LOS PLANES*/
+
+.tablitas{
+    width: 90%;
+    max-width:800px;
+    margin: auto;
+    height:70vh;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:    "tabla1 tabla1 tabla2 tabla2"
+                            "tabla1 tabla1 tabla2 tabla2"
+                            "tabla1 tabla1 tabla2 tabla2"
+                            "tabla1 tabla1 tabla2 tabla2"
+                            "footer footer footer footer";
+}
+
+.tablitas > div{
+    background: black;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.tablitas .tabla1,
+.tablitas .tabla2 {
+    background: rgba(255, 255, 255, 0.507);
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px  #ffffff;
+    padding: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.tabla1>h2{
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.tabla1 img{
+    width: 64px;
+    margin-bottom:35px;
+}
+
+.tabla1 > h3{
+    font-size:30px;
+    margin-bottom: 20px;
+}
+
+.tabla1 > p{
+    display: block;
+    margin-bottom:20px;
+}
+
+.tabla2>h2{
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.tabla2 img{
+    width: 64px;
+    margin-bottom:35px;
+}
+
+.tabla2 > h3{
+    font-size:30px;
+    margin-bottom: 20px;
+}
+
+.tabla2 > p{
+    display: block;
+    margin-bottom:20px;
+}
+
+.tablitas .tabla1 {
+    grid-area: tabla1;
+}
+
+.tablitas .tabla2 {
+    grid-area: tabla2;
+}
+
+.boton{
+    display:inline-block;
+    width: 150px;
+    padding:20px;
+    background: #a5f059;
+    text-decoration: none;
+    color: #020202;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin: auto;
+}
+
+.boton:hover {
+    background-color: rgb(0, 0, 0);
+    color: yellowgreen;
+    transition: .5s;
+}
+
+.tablitas .footer {
+    background: white;
+    color: black;
+    grid-area: footer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 850px){
+    .tablitas {
+        grid-template-areas:"tabla1 tabla1 tabla1 tabla1"
+                            "tabla1 tabla1 tabla1 tabla1"
+                            "tabla2 tabla2 tabla2 tabla2"
+                            "tabla2 tabla2 tabla2 tabla2"
+                            "footer footer footer footer";
+    }
+
+    body {
+        font-size:  14px;
+     }
+}
+
+@media screen and (max-width: 600px){
+    .tablitas {
+        grid-template-areas:"tabla1 tabla1 tabla1 tabla1"
+                            "tabla1 tabla1 tabla1 tabla1"
+                            "tabla2 tabla2 tabla2 tabla2"
+                            "tabla2 tabla2 tabla2 tabla2"
+                            "footer footer footer footer";
+    }
+     body {
+        font-size:  12px;
+     }
+}

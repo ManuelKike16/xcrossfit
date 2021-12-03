@@ -1,0 +1,75 @@
+/*FORMULARIO DE CONTACTO*/
+
+.contacto {
+    background-color: rgba(255, 255, 255, 0.26);
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 4em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contacto__titulo {
+    font-size:  1.5rem;
+    margin-bottom: .5em;
+    color: yellowgreen;
+}
+
+.contacto__container {
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+
+.contacto__group {
+    position: relative;
+    --color: #000000;
+}
+
+.contacto__input {
+    width: 100%;
+    background:  none;
+    color: #000000;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.contacto__input:focus + .contacto__label,
+.contacto__input:not(:placeholder-shown) + .contacto__label {
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: yellowgreen;
+    color: black;
+}
+
+.contacto__label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.contacto__submit {
+    background: black;
+    color: yellowgreen;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding:  .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+
+.contacto__submit:hover{
+    background: yellowgreen;
+    color: black;
+}

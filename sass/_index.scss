@@ -1,0 +1,149 @@
+/*LO QUE VIENE DEL CONTENIDO*/
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "contenido contenido sidebar"
+                         "widget-1 widget-2 sidebar";
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .sidebar{
+    background: black;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    background: rgba(255, 255, 255, 0.295);
+    color: black;
+    text-align: center;
+}
+
+.contenedor h2{
+    text-align: center;
+}
+
+.contenedor .sidebar {
+    grid-column: 3/4;
+    background: rgba(0, 0, 0, 0.719);
+    color: white;
+    min-height: 100px;
+    grid-area: sidebar;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    background: rgba(0, 0, 0, 0.719);
+    color: white;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+
+@media screen and (max-width: 850px){
+    .contenedor {
+        grid-template-areas:"contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-1"
+                            "widget-2 widget-2 widget-2";
+    }
+
+    body {
+        font-size:  14px;
+     }
+
+     .tabla{
+        width: 45%;
+        max-width:none;
+        margin-bottom: 40px;
+        flex-grow: initial;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenedor {
+        grid-template-areas:"contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-1"
+                            "widget-2 widget-2 widget-2";
+        }
+     body {
+        font-size:  12px;
+     }
+
+     .tabla{
+        width: 85%;
+        padding: 20px;
+    }
+}
+
+/*ESTILO DEL MAIN*/
+
+.banner-text {
+    padding: 0 10px;
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner-text span{
+    color: yellowgreen;
+}
+
+.banner-text h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.button1 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: yellowgreen;
+    color: black;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: black;
+    color: yellowgreen;
+    transition: .5s;
+}
+
+.button2 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: black;
+    color: yellowgreen;
+    border-radius: 5px;
+}
+
+.button2:hover {
+    background-color: yellowgreen;
+    color: black;
+    transition: .5s;
+}

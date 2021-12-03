@@ -1,0 +1,605 @@
+@charset "UTF-8";
+/*LO QUE VIENE DEL CONTENIDO*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "contenido contenido sidebar" "widget-1 widget-2 sidebar";
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .sidebar {
+  background: black;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.contenedor .contenido {
+  grid-area: contenido;
+  background: rgba(255, 255, 255, 0.295);
+  color: black;
+  text-align: center;
+}
+
+.contenedor h2 {
+  text-align: center;
+}
+
+.contenedor .sidebar {
+  grid-column: 3/4;
+  background: rgba(0, 0, 0, 0.719);
+  color: white;
+  min-height: 100px;
+  grid-area: sidebar;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+  background: rgba(0, 0, 0, 0.719);
+  color: white;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .widget-1 {
+  grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+  grid-area: widget-2;
+}
+
+@media screen and (max-width: 850px) {
+  .contenedor {
+    grid-template-areas: "contenido contenido contenido" "sidebar sidebar sidebar" "widget-1 widget-1 widget-1" "widget-2 widget-2 widget-2";
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .tabla {
+    width: 45%;
+    max-width: none;
+    margin-bottom: 40px;
+    flex-grow: initial;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contenedor {
+    grid-template-areas: "contenido contenido contenido" "sidebar sidebar sidebar" "widget-1 widget-1 widget-1" "widget-2 widget-2 widget-2";
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  .tabla {
+    width: 85%;
+    padding: 20px;
+  }
+}
+/*ESTILO DEL MAIN*/
+.banner-text {
+  padding: 0 10px;
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.banner-text span {
+  color: yellowgreen;
+}
+
+.banner-text h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.button1 {
+  margin-right: 40px;
+  padding: 10px 30px;
+  background-color: yellowgreen;
+  color: black;
+  border-radius: 5px;
+}
+
+.button1:hover {
+  background-color: black;
+  color: yellowgreen;
+  transition: 0.5s;
+}
+
+.button2 {
+  margin-right: 40px;
+  padding: 10px 30px;
+  background-color: black;
+  color: yellowgreen;
+  border-radius: 5px;
+}
+
+.button2:hover {
+  background-color: yellowgreen;
+  color: black;
+  transition: 0.5s;
+}
+
+/*acordeones*/
+.card {
+  background-color: rgba(0, 0, 0, 0.575);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card a {
+  color: yellowgreen;
+  font-size: 20px;
+}
+
+.act__h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    font-size: 14px;
+  }
+
+  .act__h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  .act__h1 {
+    font-size: 25px;
+  }
+}
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sucursales {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background-color: #cccccc;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.sucursales__h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.tarjeta__img {
+  width: 300px;
+  height: 180px;
+  margin-right: 30px;
+}
+
+.tarjeta__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tarjeta__parrafo {
+  line-height: 28px;
+  font-size: 1rem;
+}
+
+.boton--derecha {
+  position: absolute;
+  right: 20px;
+  bottom: -25px;
+}
+
+/*ADAPTANDO TAMAÑOS DE PANTALLA*/
+@media screen and (max-width: 850px) {
+  .tarjeta__img {
+    width: 225px;
+    height: 135px;
+    margin-right: 20px;
+  }
+
+  .tarjeta__titulo {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tarjeta__img {
+    width: 155px;
+    height: 90px;
+    margin-right: 10px;
+  }
+
+  .tarjeta__titulo {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .tarjeta__parrafo {
+    line-height: 20px;
+    font-size: 0.8rem;
+  }
+
+  .boton--derecha {
+    position: absolute;
+    right: 10px;
+    bottom: -40px;
+  }
+}
+/*LOS PLANES*/
+.tablitas {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "footer footer footer footer";
+}
+
+.tablitas > div {
+  background: black;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.tablitas .tabla1,
+.tablitas .tabla2 {
+  background: rgba(255, 255, 255, 0.507);
+  width: 80%;
+  height: 500px;
+  margin: auto;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 0px #ffffff;
+  padding: 60px;
+  text-align: center;
+  color: black;
+}
+
+.tabla1 > h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.tabla1 img {
+  width: 64px;
+  margin-bottom: 35px;
+}
+
+.tabla1 > h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.tabla1 > p {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tabla2 > h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.tabla2 img {
+  width: 64px;
+  margin-bottom: 35px;
+}
+
+.tabla2 > h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.tabla2 > p {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.tablitas .tabla1 {
+  grid-area: tabla1;
+}
+
+.tablitas .tabla2 {
+  grid-area: tabla2;
+}
+
+.boton {
+  display: inline-block;
+  width: 150px;
+  padding: 20px;
+  background: #a5f059;
+  text-decoration: none;
+  color: #020202;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  margin: auto;
+}
+
+.boton:hover {
+  background-color: black;
+  color: yellowgreen;
+  transition: 0.5s;
+}
+
+.tablitas .footer {
+  background: white;
+  color: black;
+  grid-area: footer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  .tablitas {
+    grid-template-areas: "tabla1 tabla1 tabla1 tabla1" "tabla1 tabla1 tabla1 tabla1" "tabla2 tabla2 tabla2 tabla2" "tabla2 tabla2 tabla2 tabla2" "footer footer footer footer";
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tablitas {
+    grid-template-areas: "tabla1 tabla1 tabla1 tabla1" "tabla1 tabla1 tabla1 tabla1" "tabla2 tabla2 tabla2 tabla2" "tabla2 tabla2 tabla2 tabla2" "footer footer footer footer";
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+/*FORMULARIO DE CONTACTO*/
+.contacto {
+  background-color: rgba(255, 255, 255, 0.26);
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 4em 2em;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contacto__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+  color: yellowgreen;
+}
+
+.contacto__container {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+
+.contacto__group {
+  position: relative;
+  --color: #000000;
+}
+
+.contacto__input {
+  width: 100%;
+  background: none;
+  color: #000000;
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color);
+}
+
+.contacto__input:focus + .contacto__label,
+.contacto__input:not(:placeholder-shown) + .contacto__label {
+  transform: translateY(-12px) scale(0.7);
+  transform-origin: left top;
+  color: yellowgreen;
+  color: black;
+}
+
+.contacto__label {
+  color: var(--color);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform 0.5s, color 0.3s;
+}
+
+.contacto__submit {
+  background: black;
+  color: yellowgreen;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.8em 0;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.contacto__submit:hover {
+  background: yellowgreen;
+  color: black;
+}
+
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #302a2a;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/back.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*BARRA DE NAVEGACION HEADER*/
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav__logo {
+  width: 140px;
+  margin-left: 20px;
+}
+
+.bar-btn {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header__nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.header__nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+
+.header__nav-menu li a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.header__nav-menu li a.active, .header__nav-menu li a:hover {
+  color: yellowgreen;
+  transition: 0.3s;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .header__nav-menu {
+  height: 100vh;
+}
+
+#check:checked ~ .header__nav-menu li {
+  display: block;
+}
+
+/*RESPONSIVE MENU*/
+@media screen and (min-width: 768px) {
+  .header__nav__logo {
+    margin-top: 50px;
+  }
+
+  nav {
+    height: 100px;
+  }
+
+  .bar-btn {
+    display: none;
+  }
+
+  .header__nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+  }
+
+  .header__nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+
+  .header__nav-menu li a {
+    font-size: 12px;
+  }
+}
+/*FOOTER*/
+.footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 4px;
+  display: grid;
+  grid-gap: 20px;
+  background: white;
+  color: black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */
