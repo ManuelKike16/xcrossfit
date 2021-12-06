@@ -3,7 +3,6 @@
 @import "sucursales";
 @import "planes";
 @import "contacto";
-@import "error";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
 
 /* CSS RESET */
@@ -130,17 +129,103 @@ nav {
 }
 
 /*FOOTER*/
-.footer {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 4px;
-    display: grid;
-    grid-gap: 20px;
-    background: white;
-    color: black;
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .footer1 .footer1__nosotros {
+    margin-right: 30px;
+    width: 40%;
+
+    h2 {
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    h2:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: yellowgreen;
+    }
+
+    p {
+        color: #999;
+        font-size: 12px;
+    }
+}
+
+footer .footer1 .footer1__redes {
+    margin-top: 50px;
+    display: flex;
+
+    li {
+        list-style: none;
+
+         a{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            background: #222;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius:  4px;
+            color: yellowgreen;
+         }
+         a:hover {
+             background: yellowgreen;
+             color: black;
+         }
+    }
+}
+
+.copyright {
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    color: white;
+}
+
+@media (max-width: 850px){
+
+    footer {
+        padding: 40px;
+    }
+
+    footer .footer1 {
+        flex-direction: column;
+    }
+
+    footer .footer1 .footer1__nosotros {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .copyright {
+        padding: 8px 40px;
+    }
 }
