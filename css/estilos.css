@@ -482,6 +482,19 @@
   color: black;
 }
 
+.gracias1 {
+  color: white;
+  text-align: center;
+  height: 800px;
+  width: 100%;
+  padding: 50px;
+}
+.gracias1 .gracias1__img {
+  text-align: center;
+  height: 65%;
+  width: 75%;
+}
+
 /* CSS RESET */
 * {
   padding: 0;
