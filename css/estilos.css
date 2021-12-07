@@ -496,7 +496,7 @@ body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   height: 100vh;
-  background-image: url(img/back.jpg);
+  background-image: url(../img/back.jpg);
   background-position: center;
   background-size: cover;
 }
