@@ -281,14 +281,14 @@
   width: 90%;
   max-width: 800px;
   margin: auto;
-  height: 70vh;
+  height: 70%;
   justify-content: center;
   align-items: center;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "footer footer footer footer";
+  grid-template-areas: "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2" "tabla1 tabla1 tabla2 tabla2";
 }
 
 .tablitas > div {
@@ -391,7 +391,7 @@
 
 @media screen and (max-width: 850px) {
   .tablitas {
-    grid-template-areas: "tabla1 tabla1 tabla1 tabla1" "tabla1 tabla1 tabla1 tabla1" "tabla2 tabla2 tabla2 tabla2" "tabla2 tabla2 tabla2 tabla2" "footer footer footer footer";
+    grid-template-areas: "tabla1 tabla1 tabla1 tabla1" "tabla1 tabla1 tabla1 tabla1" "tabla2 tabla2 tabla2 tabla2" "tabla2 tabla2 tabla2 tabla2";
   }
 
   body {
@@ -400,7 +400,7 @@
 }
 @media screen and (max-width: 600px) {
   .tablitas {
-    grid-template-areas: "tabla1 tabla1 tabla1 tabla1" "tabla1 tabla1 tabla1 tabla1" "tabla2 tabla2 tabla2 tabla2" "tabla2 tabla2 tabla2 tabla2" "footer footer footer footer";
+    grid-template-areas: "tabla1 tabla1 tabla1 tabla1" "tabla1 tabla1 tabla1 tabla1" "tabla2 tabla2 tabla2 tabla2" "tabla2 tabla2 tabla2 tabla2";
   }
 
   body {
