@@ -315,6 +315,16 @@
   padding: 60px;
   text-align: center;
   color: black;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.tablitas .tabla1:hover,
+.tablitas .tabla2:hover {
+  background: rgba(0, 0, 0, 0.541);
+  color: #fff;
+  transition: 0.5s all;
+  transform: scale(1.1);
 }
 
 .tabla1 > h2 {
@@ -381,18 +391,9 @@
 
 .boton:hover {
   text-decoration: none;
-  background-color: black;
+  background-color: white;
   color: yellowgreen;
   transition: 0.5s;
-}
-
-.tablitas .footer {
-  background: white;
-  color: black;
-  grid-area: footer;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
 @media screen and (max-width: 850px) {
@@ -512,36 +513,46 @@
   display: grid;
   justify-content: stretch;
   margin: 0 auto;
+  padding: 50px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-template-areas: "mapa mapa  info" "mapa mapa  info" "mapa mapa  info" "foto1 foto2 foto3" "foto1 foto2 foto3";
 }
 
+.cuadro__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .grid-layout__cuadro {
-  background-color: blanchedalmond;
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
   line-height: 50px;
-  padding: 5px;
+  padding: 20px;
   font-size: 15px;
 }
 
+.c3:hover, .c4:hover, .c5:hover {
+  transition: 0.5s all;
+  transform: scale(1.1);
+}
+
 .c1 {
-  margin-top: 50px;
-  height: 400px;
+  height: 500px;
   width: auto;
   grid-area: mapa;
+  background-color: rgba(0, 0, 0, 0.514);
 }
 
 .c2 {
   grid-area: info;
-  background-color: rgba(116, 116, 116, 0.37);
-  color: white;
-  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.514);
+  color: yellowgreen;
 }
 
 .c3 {
   grid-area: foto1;
-  width: 50px;
 }
 
 .c4 {
@@ -552,6 +563,87 @@
   grid-area: foto3;
 }
 
+@media screen and (max-width: 850px) {
+  .grid-layout {
+    grid-template-areas: "mapa mapa  mapa" "info info  info" "foto1 foto1 foto1" "foto2 foto2 foto2" "foto3 foto3 foto3";
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-layout {
+    grid-template-areas: "mapa mapa  mapa" "info info  info" "foto1 foto1 foto1" "foto2 foto2 foto2" "foto3 foto3 foto3";
+  }
+}
+.main_sede_col h1 {
+  color: white;
+  text-align: center;
+}
+
+.grid-layout {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  justify-content: stretch;
+  margin: 0 auto;
+  padding: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "mapa mapa  info" "mapa mapa  info" "mapa mapa  info" "foto1 foto2 foto3" "foto1 foto2 foto3";
+}
+
+.cuadro__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-layout__cuadro {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  line-height: 50px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.c3:hover, .c4:hover, .c5:hover {
+  transition: 0.5s all;
+  transform: scale(1.1);
+}
+
+.c1 {
+  height: 500px;
+  width: auto;
+  grid-area: mapa;
+  background-color: rgba(0, 0, 0, 0.514);
+}
+
+.c2 {
+  grid-area: info;
+  background-color: rgba(0, 0, 0, 0.514);
+  color: yellowgreen;
+}
+
+.c3 {
+  grid-area: foto1;
+}
+
+.c4 {
+  grid-area: foto2;
+}
+
+.c5 {
+  grid-area: foto3;
+}
+
+@media screen and (max-width: 850px) {
+  .grid-layout {
+    grid-template-areas: "mapa mapa  mapa" "info info  info" "foto1 foto1 foto1" "foto2 foto2 foto2" "foto3 foto3 foto3";
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-layout {
+    grid-template-areas: "mapa mapa  mapa" "info info  info" "foto1 foto1 foto1" "foto2 foto2 foto2" "foto3 foto3 foto3";
+  }
+}
 /* CSS RESET */
 * {
   padding: 0;
@@ -621,6 +713,7 @@ nav {
 .header__nav-menu li a.active, .header__nav-menu li a:hover {
   color: yellowgreen;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 #check {

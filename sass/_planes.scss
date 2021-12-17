@@ -35,6 +35,16 @@
     padding: 60px;
     text-align: center;
     color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.tablitas .tabla1:hover,
+.tablitas .tabla2:hover {
+    background: rgba(0, 0, 0, 0.541);
+    color: #fff;
+    transition: .5s all;
+    transform: scale(1.1);
 }
 
 .tabla1>h2{
@@ -101,18 +111,9 @@
 
 .boton:hover {
     text-decoration: none;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     color: yellowgreen;
     transition: .5s;
-}
-
-.tablitas .footer {
-    background: white;
-    color: black;
-    grid-area: footer;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 @media screen and (max-width: 850px){
@@ -120,7 +121,7 @@
         grid-template-areas:"tabla1 tabla1 tabla1 tabla1"
                             "tabla1 tabla1 tabla1 tabla1"
                             "tabla2 tabla2 tabla2 tabla2"
-                            "tabla2 tabla2 tabla2 tabla2"
+                            "tabla2 tabla2 tabla2 tabla2";
     }
 
     body {
@@ -133,7 +134,7 @@
         grid-template-areas:"tabla1 tabla1 tabla1 tabla1"
                             "tabla1 tabla1 tabla1 tabla1"
                             "tabla2 tabla2 tabla2 tabla2"
-                            "tabla2 tabla2 tabla2 tabla2"
+                            "tabla2 tabla2 tabla2 tabla2";
     }
      body {
         font-size:  12px;
