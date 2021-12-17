@@ -103,12 +103,18 @@
         }
      body {
         font-size:  12px;
+
+        .banner-text {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
      }
 
      .tabla{
         width: 85%;
         padding: 20px;
     }
+    
 }
 
 /*ESTILO DEL MAIN*/
@@ -146,6 +152,7 @@
     background-color: black;
     color: yellowgreen;
     transition: .5s;
+    text-decoration: none;
 }
 
 .button2 {
@@ -160,4 +167,5 @@
     background-color: yellowgreen;
     color: black;
     transition: .5s;
+    text-decoration: none;
 }

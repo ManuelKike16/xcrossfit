@@ -1,0 +1,60 @@
+.main_sede_col {
+    h1 {
+        color: white;
+        text-align: center;
+    }
+}
+
+.grid-layout {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    justify-content: stretch;
+    margin:  0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'mapa mapa  info'
+                         'mapa mapa  info'
+                         'mapa mapa  info'
+                         'foto1 foto2 foto3'
+                         'foto1 foto2 foto3';
+}
+
+
+.grid-layout__cuadro {
+    background-color: blanchedalmond;
+    text-align: center;
+    line-height: 50px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.c1 {
+    margin-top: 50px;
+    height: 400px;
+    width: auto;
+    grid-area: mapa;
+}
+
+.c2 {
+    grid-area: info;
+    background-color: rgba(116, 116, 116, 0.37);
+    color: white;
+    border-radius: 40px;
+}
+
+.c3 {
+    grid-area: foto1;
+    width: 50px;
+
+}
+
+.c4 {
+    grid-area: foto2;
+}
+
+.c5 {
+    grid-area: foto3;
+}
+
+
