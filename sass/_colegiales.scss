@@ -12,7 +12,7 @@
     display: grid;
     justify-content: stretch;
     margin:  0 auto;
-    padding: 50px;
+    padding: 0px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "mapa mapa  info"
